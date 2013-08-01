@@ -23,7 +23,6 @@
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
-<!--
 	<build>
 		<plugins>
 			<plugin>
@@ -32,11 +31,10 @@
 				<version>2.14.1</version>
 				<configuration>
 					<parallel>classes</parallel>
-					<threadCount>4</threadCount>
+					<threadCount>2</threadCount>
 					<perCoreThreadCount>false</perCoreThreadCount>
 				</configuration>
 			</plugin>
 		</plugins>
 	</build>
-  -->
 </project>

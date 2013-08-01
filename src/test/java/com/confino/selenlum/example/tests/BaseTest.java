@@ -7,14 +7,15 @@ import org.junit.Before;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
+import com.confino.selenium.example.utils.DriverUtils;
+
 public class BaseTest {
 	
 	WebDriver driver;
 	
 	@Before
 	public void openTheBrowser() {
-		driver = new FirefoxDriver();
-    	driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver = DriverUtils.getFirefoxDriver();
 	}
 	
 	@After

@@ -4,16 +4,16 @@ import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 
-import com.confino.selenium.example.pageObject.Home;
-import com.confino.selenium.example.pageObject.InternationalNews;
+import com.confino.selenium.example.pageObject.GoogleHome;
+import com.confino.selenium.example.pageObject.SearchResults;
 
 public class Firefox2Test extends BaseTest{
 	
 	@Test
 	public void basicTest(){
-		Home home = Home.navigateTo(driver);
-		InternationalNews internationalNews = home.switchToInternational();
-		assertTrue(internationalNews.headerEditionContains("EDITION:  INTERNATIONAL"));
+		GoogleHome google = GoogleHome.navigateTo(driver);
+		SearchResults searchResults = google.searchFor("dogs");
+		assertTrue(searchResults.searchResultsContain("The domestic dog is a subspecies of the gray wolf"));
 	}
 
 }

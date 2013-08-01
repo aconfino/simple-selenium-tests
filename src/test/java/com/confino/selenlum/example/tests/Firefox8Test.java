@@ -2,22 +2,18 @@ package com.confino.selenlum.example.tests;
 
 import static org.junit.Assert.assertTrue;
 
-import org.junit.After;
-import org.junit.Before;
 import org.junit.Test;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
 
-import com.confino.selenium.example.pageObject.Home;
-import com.confino.selenium.example.pageObject.InternationalNews;
+import com.confino.selenium.example.pageObject.GoogleHome;
+import com.confino.selenium.example.pageObject.SearchResults;
 
 public class Firefox8Test extends BaseTest{
 	
 	@Test
 	public void basicTest(){
-		Home home = Home.navigateTo(driver);
-		InternationalNews internationalNews = home.switchToInternational();
-		assertTrue(internationalNews.headerEditionContains("EDITION:  INTERNATIONAL"));
+		GoogleHome google = GoogleHome.navigateTo(driver);
+		SearchResults searchResults = google.searchFor("dogs");
+		assertTrue(searchResults.searchResultsContain("The domestic dog is a subspecies of the gray wolf"));
 	}
 
 }

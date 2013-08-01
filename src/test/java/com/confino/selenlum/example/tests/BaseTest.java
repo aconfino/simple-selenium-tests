@@ -12,7 +12,7 @@ public class BaseTest {
 	
 	@Before
 	public void openTheBrowser() {
-		driver = DriverUtils.getFirefoxDriver(5);
+		driver = DriverUtils.getRemoteFirefoxDriver(5);
 	}
 	
 	@After

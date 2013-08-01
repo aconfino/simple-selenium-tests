@@ -24,7 +24,6 @@
 		</dependency>
 	</dependencies>
 
-<!--
 	<build>
 		<plugins>
 			<plugin>
@@ -33,11 +32,11 @@
 				<version>2.14.1</version>
 				<configuration>
 					<parallel>classes</parallel>
-					<threadCount>2</threadCount>
+					<threadCount>10</threadCount>
 					<perCoreThreadCount>false</perCoreThreadCount>
 				</configuration>
 			</plugin>
 		</plugins>
 	</build>
-  -->
+
 </project>

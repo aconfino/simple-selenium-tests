@@ -12,12 +12,14 @@ public class BaseTest {
 	
 	@Before
 	public void openTheBrowser() {
-		driver = DriverUtils.getFirefoxDriver();
+		driver = DriverUtils.getFirefoxDriver(5);
 	}
 	
 	@After
 	public void closeTheBrowser() {
-		driver.quit();
+		if(driver != null){
+			driver.quit();
+		}
 	}
 
 }

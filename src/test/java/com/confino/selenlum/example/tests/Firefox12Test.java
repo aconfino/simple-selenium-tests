@@ -12,8 +12,8 @@ public class Firefox12Test extends BaseTest{
 	@Test
 	public void basicTest(){
 		GoogleHome google = GoogleHome.navigateTo(driver);
-		SearchResults searchResults = google.searchFor("dogs");
-		assertTrue(searchResults.searchResultsContain("The domestic dog is a subspecies of the gray wolf"));
+		SearchResults searchResults = google.performDefaultSearch();
+		assertTrue(searchResults.correctPage());
 	}
 
 }

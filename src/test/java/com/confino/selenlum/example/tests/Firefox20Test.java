@@ -13,7 +13,7 @@ public class Firefox20Test extends BaseTest{
 	public void basicTest(){
 		GoogleHome google = GoogleHome.navigateTo(driver);
 		SearchResults searchResults = google.searchFor("dogs");
-		assertTrue(searchResults.searchResultsContain("The domestic dog is a subspecies of the gray wolf"));
+		assertTrue(searchResults.correctPage());
 	}
 
 }

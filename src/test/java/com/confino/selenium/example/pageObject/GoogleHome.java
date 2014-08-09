@@ -23,6 +23,10 @@ public class GoogleHome {
 		driver.get("http://www.google.com/");
 		return PageFactory.initElements(driver, GoogleHome.class);
 	}
+	
+	public SearchResults performDefaultSearch(){
+		return searchFor("dogs");
+	}
 
 	public SearchResults searchFor(String searchTerm) {
 		inputField.sendKeys(searchTerm);

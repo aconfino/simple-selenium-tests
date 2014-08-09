@@ -18,5 +18,9 @@ public class SearchResults {
 	public boolean searchResultsContain(String string){
 		return searchResults.getText().contains(string);
 	}
+	
+	public boolean correctPage(){
+		return searchResultsContain("The term \"domestic dog\" is generally used for both domesticated");
+	}
 
 }
